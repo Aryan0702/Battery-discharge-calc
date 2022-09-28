@@ -1,0 +1,32 @@
+<h1>Calculator</h1>
+{% load static %}
+{% load calc_tag %}
+    
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Calculator</title>
+    </head>
+    <form method="GET" action="{% url 'calc'%}">
+        <div class="form-group">
+            <input type="text" class="form-control" name="query" id="query">
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <input type="submit" class="btn btn-success">
+            </div>
+        </div>
+        Battery Capacity:<br> <input type="number" name="battery_capacity">
+        <br><br>
+        Origin:<br> <input type="text" name="origin">
+        <br><br>
+        Destination:<br> <input type="text" name="destination">
+        <br><br>
+        Number of people in the car:<br> <input type="number" name="no_of_people">
+     </form>
+     <button type="button" onclick = "location.href = '{% url 'calc' %}'">Calculate</button>
+    
+     
+</html>
+
+
